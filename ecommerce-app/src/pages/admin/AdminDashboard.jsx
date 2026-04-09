@@ -44,7 +44,7 @@ const AdminDashboard = () => {
 
   const fetchCustomers = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/customers')
+      const response = await fetch(`${API_URL}/api/customers`)
       const data = await response.json()
       setCustomers(data)
     } catch (error) {
@@ -54,7 +54,7 @@ const AdminDashboard = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/products/all')
+      const response = await fetch(`${API_URL}/api/products/all`)
       const data = await response.json()
       setProducts(data)
     } catch (error) {
@@ -64,7 +64,7 @@ const AdminDashboard = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/orders/all')
+      const response = await fetch(`${API_URL}/api/orders/all`)
       const data = await response.json()
       setOrders(data)
       
