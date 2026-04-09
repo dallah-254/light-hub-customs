@@ -280,3 +280,32 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
+/* Mobile - Very Small Cards */
+@media (max-width: 480px) {
+  .product-card {
+    min-width: 100px !important;
+  }
+  
+  .product-card img {
+    height: 85px !important;
+  }
+  
+  .product-card h3 {
+    font-size: 0.6rem !important;
+  }
+  
+  .product-card .price {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* Tablet - Small Cards */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .product-card {
+    min-width: 130px !important;
+  }
+  
+  .product-card img {
+    height: 110px !important;
+  }
+}

@@ -647,4 +647,56 @@
     padding: 2rem;
     font-size: 0.8rem;
   }
+}/* Mobile - Very Small Cards */
+@media (max-width: 480px) {
+  .product-card {
+    min-width: 100px !important;
+  }
+  
+  .product-card img {
+    height: 85px !important;
+  }
+  
+  .product-card h3 {
+    font-size: 0.6rem !important;
+    padding: 0.3rem !important;
+  }
+  
+  .product-card .price {
+    font-size: 0.7rem !important;
+    padding: 0 0.3rem 0.3rem !important;
+  }
+  
+  .category-card {
+    min-width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .category-card h3 {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* Tablet - Small Cards */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .product-card {
+    min-width: 130px !important;
+  }
+  
+  .product-card img {
+    height: 110px !important;
+  }
+  
+  .product-card h3 {
+    font-size: 0.7rem !important;
+  }
+  
+  .product-card .price {
+    font-size: 0.8rem !important;
+  }
+  
+  .category-card {
+    min-width: 130px !important;
+    height: 130px !important;
+  }
 }
