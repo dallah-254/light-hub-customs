@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import './SectionBar.css'
+// Styles in homepage.css
 
 const SectionBar = () => {
   const navigate = useNavigate()

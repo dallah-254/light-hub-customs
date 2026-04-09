@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import './CategorySlider.css'
+// Styles in homepage.css
 
 const CategorySlider = ({ categories }) => {
   const navigate = useNavigate()

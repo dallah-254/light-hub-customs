@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './Carousel.css'
+// Styles in homepage.css
 
 const Carousel = ({ products }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
