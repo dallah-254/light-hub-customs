@@ -21,8 +21,8 @@
 }
 
 .about-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 3rem 2rem;
 }
 
@@ -52,7 +52,7 @@
 
 .feature-card {
   text-align: center;
-  padding: 2rem;
+  padding: 0;
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -108,7 +108,7 @@
 
 .location-details {
   background: white;
-  padding: 2rem;
+  padding: 0;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }

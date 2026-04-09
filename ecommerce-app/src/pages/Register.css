@@ -10,7 +10,7 @@
 .register-card {
   background: transparent;
   padding: 2rem 3rem;
-  max-width: 500px;
+  width: 100%;
   width: 100%;
 }
 

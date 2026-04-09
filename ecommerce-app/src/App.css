@@ -10,17 +10,19 @@ body {
   color: #2c3e50;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .app {
   min-height: 100vh;
   background: #f5f7fa;
+  width: 100%;
 }
 
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   background: #f5f7fa;
   color: #2c3e50;
 }

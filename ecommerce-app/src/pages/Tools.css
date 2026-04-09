@@ -1,7 +1,7 @@
 .tools-page {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .tools-header {
@@ -31,7 +31,7 @@
 .tool-card {
   background: #ffffff;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
   cursor: pointer;

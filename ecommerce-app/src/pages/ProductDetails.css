@@ -1,7 +1,7 @@
 .product-details {
   max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .product-container {
@@ -11,7 +11,7 @@
   align-items: start;
   background: #ffffff;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   margin-bottom: 2rem;
   max-width: 100%;
@@ -20,7 +20,7 @@
 .product-details-section {
   background: #ffffff;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   margin-bottom: 2rem;
   max-width: 100%;

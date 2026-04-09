@@ -1,7 +1,7 @@
 .home {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   animation: fadeIn 0.5s ease-out;
 }
 
@@ -174,7 +174,7 @@
 
 .bottom-carousel-section {
   margin-top: 4rem;
-  padding: 2rem;
+  padding: 0;
   background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
@@ -239,7 +239,7 @@
 @media (max-width: 1024px) {
   .home {
     padding: 1.5rem;
-    max-width: 1200px;
+    width: 100%;
   }
   
   .hero-section {
@@ -433,7 +433,7 @@
 /* ==================== */
 @media (min-width: 1441px) {
   .home {
-    max-width: 1600px;
+    width: 100%;
     padding: 2.5rem;
   }
   
@@ -461,7 +461,7 @@
   
   .product-grid {
     gap: 2rem;
-    padding: 2rem;
+    padding: 0;
   }
   
   .product-grid::-webkit-scrollbar {
@@ -504,7 +504,7 @@
 /* ==================== */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .home {
-    max-width: 1300px;
+    width: 100%;
   }
   
   .product-card {
@@ -644,7 +644,7 @@
 
 @media (max-width: 768px) {
   .empty-category {
-    padding: 2rem;
+    padding: 0;
     font-size: 0.8rem;
   }
 }/* Mobile - Very Small Cards */

@@ -1,7 +1,7 @@
 .profile-page {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
   background: #f8fafc;
 }
@@ -132,7 +132,7 @@
 .profile-content {
   background: white;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 0;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   min-height: 600px;
 }

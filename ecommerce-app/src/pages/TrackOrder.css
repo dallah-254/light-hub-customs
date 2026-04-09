@@ -1,7 +1,7 @@
 .track-order-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@
 .track-input-section {
   display: flex;
   gap: 1rem;
-  max-width: 600px;
+  width: 100%;
   margin: 0 auto 2rem;
 }
 
@@ -87,7 +87,7 @@
   background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
 }
 
 .order-header {
@@ -181,7 +181,7 @@
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
 }
 
 .tracking-timeline h3 {
@@ -294,7 +294,7 @@
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
 }
 
 .order-items-section h3 {
