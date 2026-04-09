@@ -21,7 +21,6 @@ services:
   - type: web
     name: lighthub-ecommerce-app
     runtime: static
-    plan: free
     buildCommand: cd ecommerce-app && npm install && npm run build
     staticPublishPath: ./ecommerce-app/dist
     envVars:
