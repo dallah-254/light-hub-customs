@@ -17,7 +17,7 @@
 .hero-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
+  gap: 0;
   margin-bottom: 3rem;
 }
 
@@ -78,10 +78,10 @@
 
 .product-grid {
   display: flex;
-  gap: 1.5rem;
+  gap: 0;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 1.5rem;
+  padding: 0;
   scrollbar-width: thin;
   scrollbar-color: #4f46e5 #f1f1f1;
   -webkit-overflow-scrolling: touch;
@@ -192,8 +192,8 @@
 /* Loading skeleton */
 .product-grid-skeleton {
   display: flex;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  gap: 0;
+  padding: 0;
 }
 
 .skeleton-card {
@@ -238,7 +238,7 @@
 /* ==================== */
 @media (max-width: 1024px) {
   .home {
-    padding: 1.5rem;
+    padding: 0;
     width: 100%;
   }
   
@@ -266,7 +266,7 @@
   
   .bottom-carousel-section {
     margin-top: 3rem;
-    padding: 1.5rem;
+    padding: 0;
   }
   
   .section-title {
