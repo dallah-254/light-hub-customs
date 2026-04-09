@@ -1,0 +1,39 @@
+services:
+  # Backend API
+  - type: web
+    name: lighthub-orders-api
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: cd orders-api && npm install
+    startCommand: cd orders-api && npm run start:dynamodb
+    envVars:
+      - key: AWS_REGION
+        value: us-east-1
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: PORT
+        value: 3001
+
+  # Frontend App
+  - type: web
+    name: lighthub-ecommerce-app
+    runtime: static
+    region: oregon
+    plan: free
+    buildCommand: cd ecommerce-app && npm install && npm run build
+    staticPublishPath: ./ecommerce-app/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: lighthub-orders-api
+          property: host
+      - key: VITE_AWS_REGION
+        value: us-east-1
+      - key: VITE_COGNITO_USER_POOL_ID
+        sync: false
+      - key: VITE_COGNITO_CLIENT_ID
+        sync: false

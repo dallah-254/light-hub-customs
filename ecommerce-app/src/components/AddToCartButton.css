@@ -1,0 +1,35 @@
+.add-to-cart-btn {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.add-to-cart-btn.added {
+  background: #10b981;
+}
+
+.add-to-cart-btn .check-icon {
+  font-size: 1.2rem;
+  animation: checkPop 0.3s ease;
+}
+
+@keyframes checkPop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
