@@ -13,7 +13,7 @@
 .help-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .search-box {
@@ -64,7 +64,7 @@
 .help-sidebar h3 {
   margin: 0 0 1rem 0;
   font-size: 1.1rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .help-sidebar button {
@@ -115,7 +115,7 @@
 .faqs-section h2 {
   margin: 0 0 1.5rem 0;
   font-size: 1.5rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .faqs-list {
@@ -139,7 +139,7 @@
 
 .faq-item summary {
   font-weight: 600;
-  color: #1e293b;
+  color: #ffffff;
   font-size: 1.05rem;
   cursor: pointer;
   list-style: none;
@@ -185,7 +185,7 @@
 .quick-links h3 {
   margin: 0 0 1.5rem 0;
   font-size: 1.25rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .links-grid {
@@ -229,7 +229,7 @@
 .contact-section h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .contact-section > p {
@@ -291,7 +291,7 @@
 .contact-info h3 {
   margin: 0 0 1.5rem 0;
   font-size: 1.25rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .contact-methods {
@@ -313,7 +313,7 @@
 .method strong {
   display: block;
   margin-bottom: 0.25rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .method p {

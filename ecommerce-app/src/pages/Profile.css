@@ -91,7 +91,7 @@
 
 .profile-nav button:hover {
   background: #f1f5f9;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .profile-nav button.active {
@@ -140,7 +140,7 @@
 .tab-content h1 {
   font-size: 1.75rem;
   margin: 0 0 1.5rem 0;
-  color: #1e293b;
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -190,7 +190,7 @@
 .stat-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -210,7 +210,7 @@
   font-size: 1.25rem;
   margin: 0;
   font-weight: 600;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .link-btn {
@@ -259,7 +259,7 @@
   font-weight: 600;
   font-size: 1rem;
   margin-right: 0.75rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .order-date {
@@ -398,7 +398,7 @@
 .order-info h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .order-items-detailed {
@@ -430,7 +430,7 @@
 .item-info h4 {
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .item-info p {
@@ -447,7 +447,7 @@
 .item-total {
   font-size: 1rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .order-summary-detailed {
@@ -483,7 +483,7 @@
 .shipping-info h4 {
   margin: 0 0 0.75rem 0;
   font-size: 1rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .shipping-info p {
@@ -497,7 +497,7 @@
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .actions-grid {
@@ -550,7 +550,7 @@
   font-size: 1.25rem;
   margin-bottom: 1.25rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .info-grid {
@@ -573,7 +573,7 @@
 .info-item p {
   margin: 0;
   font-size: 1rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .security-options {
@@ -595,7 +595,7 @@
 .security-item h4 {
   margin: 0 0 0.25rem 0;
   font-size: 1rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .security-item p {
@@ -718,7 +718,7 @@
 .empty-state h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #1e293b;
+  color: #ffffff;
 }
 
 .empty-state p {
