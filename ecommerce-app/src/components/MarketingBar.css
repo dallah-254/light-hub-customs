@@ -315,15 +315,6 @@
 /* ==================== */
 /* DARK MODE SUPPORT */
 /* ==================== */
-@media (prefers-color-scheme: dark) {
-  .marketing-bar {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  }
-  
-  .marketing-cta {
-    background: rgba(0, 0, 0, 0.8);
-  }
-}
 
 /* ==================== */
 /* ANIMATION ON SCROLL (optional) */

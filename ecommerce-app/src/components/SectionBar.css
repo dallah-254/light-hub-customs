@@ -362,46 +362,6 @@
 /* ==================== */
 /* DARK MODE SUPPORT */
 /* ==================== */
-@media (prefers-color-scheme: dark) {
-  .section-bar {
-    background: #1e293b;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  
-  .section-bar::-webkit-scrollbar-track {
-    background: #334155;
-  }
-  
-  .section-bar::-webkit-scrollbar-thumb {
-    background: #818cf8;
-  }
-  
-  .section-bar::-webkit-scrollbar-thumb:hover {
-    background: #a5b4fc;
-  }
-  
-  .scroll-btn {
-    background: #334155;
-    color: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  }
-  
-  .scroll-btn:hover {
-    background: #4f46e5;
-  }
-  
-  .section-bar-container::before {
-    background: linear-gradient(to right, #1e293b, transparent);
-  }
-  
-  .section-bar-container::after {
-    background: linear-gradient(to left, #1e293b, transparent);
-  }
-  
-  .scroll-indicator {
-    color: #64748b;
-  }
-}
 
 /* ==================== */
 /* HIGH CONTRAST MODE */

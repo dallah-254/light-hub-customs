@@ -591,38 +591,6 @@
 /* ==================== */
 /* DARK MODE SUPPORT */
 /* ==================== */
-@media (prefers-color-scheme: dark) {
-  .home {
-    background: #0f172a;
-  }
-  
-  .category-card {
-    background: #1e293b;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  
-  .product-card {
-    background: #334155;
-  }
-  
-  .product-card h3 {
-    color: #f1f5f9;
-  }
-  
-  .product-grid::-webkit-scrollbar-track {
-    background: #1e293b;
-  }
-  
-  .skeleton-card {
-    background: #334155;
-  }
-  
-  .skeleton-card .skeleton-img,
-  .skeleton-card .skeleton-text,
-  .skeleton-card .skeleton-price {
-    background: #475569;
-  }
-}
 
 /* ==================== */
 /* HIGH CONTRAST MODE */
