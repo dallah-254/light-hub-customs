@@ -114,7 +114,7 @@ const AdminDashboard = () => {
     try {
       const url = editingProduct 
         ? `${API_URL}/api/products/${editingProduct.productId}`
-        : `${API_URL}/api/products'
+        : `${API_URL}/api/products`
       
       const method = editingProduct ? 'PUT' : 'POST'
       
