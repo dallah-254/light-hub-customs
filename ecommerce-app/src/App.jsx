@@ -34,7 +34,6 @@ import Help from './pages/Help.jsx'
 import Contact from './pages/Contact.jsx'
 import AdminLogin from './pages/admin/AdminLogin.jsx'
 import AdminDashboard from './pages/admin/AdminDashboard.jsx'
-import './App.css'
 
 function App() {
   return (
