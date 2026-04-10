@@ -1,17 +1,17 @@
 .register-page-multi {
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   background: white;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
 }
 
 .register-card {
   background: transparent;
-  padding: 2rem 3rem;
+  padding: 2rem;
   width: 100%;
-  width: 30%;
+  max-width: 450px;
 }
 
 .brand-logo {
@@ -393,4 +393,73 @@
 .code-box:focus {
   outline: none;
   border-color: #4f46e5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-page-multi {
+    padding: 1rem;
+  }
+  
+  .register-card {
+    padding: 1.5rem;
+  }
+  
+  .register-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .form-field input {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+  
+  .register-btn {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+  
+  .step-indicator {
+    gap: 0.5rem;
+  }
+  
+  .step {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 1rem;
+  }
+  
+  .register-card h2 {
+    font-size: 1.2rem;
+  }
+  
+  .form-field input {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .register-btn, .back-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .step {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+  
+  .step-line {
+    width: 20px;
+  }
 }
