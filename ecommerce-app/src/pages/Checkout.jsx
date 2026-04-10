@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import API_URL from '../config/api-config'
-import './Checkout.css'
 
 const Checkout = () => {
   const navigate = useNavigate()

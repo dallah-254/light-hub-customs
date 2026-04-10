@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import API_URL from '../config/api-config'
-import './Orders.css'
 
 const Orders = () => {
   const userSession = localStorage.getItem('userSession')

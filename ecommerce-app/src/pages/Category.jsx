@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { getProductsByCategory } from '../services/dynamodb'
 import Carousel from '../components/Carousel'
 import MarketingBar from '../components/MarketingBar'
-import './Category.css'
 
 const Category = () => {
   const { name } = useParams()

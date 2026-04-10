@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './DeliveryInfo.css'
 
 const DeliveryInfo = ({ showSeller = false }) => {
   const [selectedCounty, setSelectedCounty] = useState('Nairobi')

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './FitmentGuide.css'
 
 const FitmentGuide = () => {
   const [selectedCategory, setSelectedCategory] = useState('')

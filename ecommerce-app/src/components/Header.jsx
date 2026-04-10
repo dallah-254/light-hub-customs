@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import './Header.css'
 import { getCategories } from '../services/dynamodb'
 import { signOut } from '../services/auth'
 import { useCart } from '../context/CartContext'

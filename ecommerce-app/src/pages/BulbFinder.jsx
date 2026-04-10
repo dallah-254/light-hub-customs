@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { getVehicleMakes, getVehicleModels, getBulbSizes } from '../services/dynamodb'
-import './BulbFinder.css'
 
 const BulbFinder = () => {
   const [makes, setMakes] = useState([])

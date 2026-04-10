@@ -2,7 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useWishlist } from '../context/WishlistContext'
 import { useCart } from '../context/CartContext'
-import './Wishlist.css'
 
 const Wishlist = () => {
   const navigate = useNavigate()

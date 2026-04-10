@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { getProductById, getProductsByCategory } from '../services/dynamodb'
 import AddToCartButton from '../components/AddToCartButton'
 import { useWishlist } from '../context/WishlistContext'
-import './ProductDetails.css'
 
 const ProductDetails = () => {
   const { productId } = useParams()

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { signIn, forgotPassword, confirmPassword } from '../services/auth'
-import './Login.css'
 
 const Login = () => {
   const navigate = useNavigate()

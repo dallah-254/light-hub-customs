@@ -5,7 +5,6 @@ import CategorySlider from '../components/CategorySlider'
 import SectionBar from '../components/SectionBar'
 import { getProductsBySection, getCategories, getProductsByCategory } from '../services/dynamodb'
 import { useNavigate } from 'react-router-dom'
-import './homepage.css'
 
 const Home = () => {
   const [carouselProducts, setCarouselProducts] = useState([])

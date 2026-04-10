@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { getProductsByCategory, getCategories } from '../services/dynamodb'
-import './CompareProducts.css'
 
 const CompareProducts = () => {
   const [categories, setCategories] = useState([])

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './Help.css'
 
 const Help = () => {
   const [activeCategory, setActiveCategory] = useState('orders')

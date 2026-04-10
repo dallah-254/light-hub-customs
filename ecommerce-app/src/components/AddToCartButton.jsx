@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useCart } from '../context/CartContext'
-import './AddToCartButton.css'
 
 const AddToCartButton = ({ product, quantity = 1, className = '' }) => {
   const { addToCart } = useCart()

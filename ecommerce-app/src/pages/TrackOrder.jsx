@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import API_URL from '../config/api-config'
-import './TrackOrder.css'
 
 const TrackOrder = () => {
   const [searchParams] = useSearchParams()

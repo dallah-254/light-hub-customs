@@ -2,7 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import DeliveryInfo from '../components/DeliveryInfo'
-import './Cart.css'
 
 const Cart = () => {
   const navigate = useNavigate()

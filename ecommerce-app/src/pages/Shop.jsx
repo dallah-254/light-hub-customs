@@ -4,7 +4,6 @@ import Carousel from '../components/Carousel'
 import MarketingBar from '../components/MarketingBar'
 import SectionBar from '../components/SectionBar'
 import { getProductsBySection, getCategories, getProductsByCategory } from '../services/dynamodb'
-import './Shop.css'
 
 const Shop = () => {
   const [searchParams] = useSearchParams()

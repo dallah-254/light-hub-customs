@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCategories, getProductsByCategory } from '../services/dynamodb'
-import './Categories.css'
 
 const Categories = () => {
   const [categories, setCategories] = useState([])

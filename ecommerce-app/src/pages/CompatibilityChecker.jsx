@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { getProductsByCategory, getVehicleMakes, getVehicleModels } from '../services/dynamodb'
-import './CompatibilityChecker.css'
 
 const CompatibilityChecker = () => {
   const [makes, setMakes] = useState([])

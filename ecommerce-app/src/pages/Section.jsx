@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getProductsBySection } from '../services/dynamodb'
 import Carousel from '../components/Carousel'
-import '../pages/Category.css'
 
 const Section = () => {
   const { name } = useParams()
