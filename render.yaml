@@ -17,21 +17,21 @@ services:
       - key: PORT
         value: 3001
 
-  # Frontend App
-  - type: web
-    name: lighthub-ecommerce-app
-    runtime: static
-    buildCommand: cd ecommerce-app && npm install && npm run build
-    staticPublishPath: ./ecommerce-app/dist
-    envVars:
-      - key: VITE_API_URL
-        fromService:
-          type: web
-          name: lighthub-orders-api
-          property: host
-      - key: VITE_AWS_REGION
-        value: us-east-1
-      - key: VITE_COGNITO_USER_POOL_ID
-        sync: false
-      - key: VITE_COGNITO_CLIENT_ID
-        sync: false
+  # Frontend App - DISABLED FOR NOW
+  # - type: web
+  #   name: lighthub-ecommerce-app
+  #   runtime: static
+  #   buildCommand: cd ecommerce-app && npm install && npm run build
+  #   staticPublishPath: ./ecommerce-app/dist
+  #   envVars:
+  #     - key: VITE_API_URL
+  #       fromService:
+  #         type: web
+  #         name: lighthub-orders-api
+  #         property: host
+  #     - key: VITE_AWS_REGION
+  #       value: us-east-1
+  #     - key: VITE_COGNITO_USER_POOL_ID
+  #       sync: false
+  #     - key: VITE_COGNITO_CLIENT_ID
+  #       sync: false

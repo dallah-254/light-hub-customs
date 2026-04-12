@@ -14,6 +14,25 @@ const client = new DynamoDBClient({ region: 'us-east-1' })
 const docClient = DynamoDBDocumentClient.from(client)
 const TABLE_NAME = 'LightHubOrders'
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() })
+})
+
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Light Hub Orders API', 
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      orders: '/api/orders',
+      products: '/api/products',
+      customers: '/api/customers'
+    }
+  })
+})
+
 // Track order by order ID (must be before /:userId route)
 app.get('/api/orders/track/:orderId', async (req, res) => {
   try {
@@ -132,6 +151,12 @@ app.patch('/api/orders/:orderId/status', async (req, res) => {
     console.error('Error updating order:', error)
     res.status(500).json({ error: 'Failed to update order' })
   }
+})
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error('Error:', err)
+  res.status(500).json({ error: 'Internal server error' })
 })
 
 app.listen(PORT, () => {
