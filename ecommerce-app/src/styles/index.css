@@ -1,0 +1,24 @@
+/* ============================================ */
+/* MASTER STYLES INDEX */
+/* Import all style files in correct order */
+/* ============================================ */
+
+/* 1. Global Styles */
+@import './1-global.css';
+
+/* 2. Layout Styles */
+@import './2-layout.css';
+
+/* 3. Component Styles */
+@import './components/header.css';
+
+/* 4. Page Styles - Split into 3 parts */
+@import './pages/pages-part1.css';
+@import './pages/pages-part2.css';
+@import './pages/pages-part3.css';
+
+/* 5. Auth Styles */
+@import './4-auth.css';
+
+/* 6. Utility Styles */
+@import './5-utilities.css';
