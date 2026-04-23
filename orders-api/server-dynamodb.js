@@ -1,16 +1,23 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb')
 const { DynamoDBDocumentClient, PutCommand, QueryCommand, ScanCommand, GetCommand, UpdateCommand, DeleteCommand } = require('@aws-sdk/lib-dynamodb')
 
 const app = express()
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 
 app.use(cors())
 app.use(express.json())
 
 // DynamoDB setup
-const client = new DynamoDBClient({ region: 'us-east-1' })
+const client = new DynamoDBClient({ 
+  region: process.env.AWS_REGION || 'us-east-1',
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+  }
+})
 const docClient = DynamoDBDocumentClient.from(client)
 const TABLE_NAME = 'LightHubOrders'
 

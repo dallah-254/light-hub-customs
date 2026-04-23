@@ -50,131 +50,189 @@ const Header = () => {
     }
   }
 
+  const [showMobileSearch, setShowMobileSearch] = useState(false)
+
   return (
-    <header className="header">
-      <div className="top-bar">
-        <div className="top-bar-container">
-          <div className="promo">🎉 Free Shipping on Orders Over $50 | 24/7 Support</div>
-          <div className="top-links">
-            <Link to="/track">Track Order</Link>
-            <Link to="/help">Help</Link>
-            <Link to="/contact">Contact</Link>
-          </div>
+    <header className="modern-header">
+      {/* Top Announcement Bar */}
+      <div className="announcement-bar">
+        <div className="announcement-content">
+          <span>🚚 Free Shipping on Orders Over $50</span>
+          <span className="divider">|</span>
+          <span>📞 24/7 Customer Support</span>
+          <span className="divider">|</span>
+          <span>⚡ Same Day Shipping Available</span>
         </div>
       </div>
-      <div className="main-header">
-        <div className="header-container">
-          <div className="logo" onClick={() => navigate('/')}>
-            <h1>LIGHT HUB CUSTOMS</h1>
-            <span className="tagline">Premium Custom Products</span>
+
+      {/* Main Header */}
+      <div className="header-main">
+        <div className="header-wrapper">
+          {/* Logo */}
+          <div className="brand-logo" onClick={() => navigate('/')}>
+            <div className="logo-text">
+              <h1>LIGHT HUB CUSTOMS</h1>
+            </div>
           </div>
 
-          {/* Hamburger Menu Button */}
-          <button 
-            className="hamburger-btn" 
-            onClick={() => setShowMobileMenu(!showMobileMenu)}
-            aria-label="Toggle menu"
-          >
+          {/* Search Bar - Desktop */}
+          <form className="search-bar-main desktop-search" onSubmit={handleSearch}>
+            <input 
+              type="text" 
+              placeholder="Search by product, vehicle, or part number..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button type="submit">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </button>
+          </form>
+
+          {/* Header Actions */}
+          <div className="header-icons">
+            {/* Mobile Search Icon */}
+            <button className="header-icon mobile-search-icon" onClick={() => setShowMobileSearch(!showMobileSearch)}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </button>
+
+            <button className="header-icon" onClick={() => navigate('/track')}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+              <span>Track</span>
+            </button>
+
+            {isLoggedIn ? (
+              <div className="profile-dropdown">
+                <button className="header-icon" onClick={() => setShowProfileMenu(!showProfileMenu)}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                  <span>Account</span>
+                </button>
+                {showProfileMenu && (
+                  <div className="dropdown-panel">
+                    <Link to="/profile" onClick={() => setShowProfileMenu(false)}>My Profile</Link>
+                    <Link to="/orders" onClick={() => setShowProfileMenu(false)}>Orders</Link>
+                    <Link to="/wishlist" onClick={() => setShowProfileMenu(false)}>Wishlist</Link>
+                    <button onClick={handleLogout}>Logout</button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <button className="header-icon" onClick={() => navigate('/login')}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" strokeWidth="2"/>
+                </svg>
+                <span>Login</span>
+              </button>
+            )}
+
+            <button className="header-icon" onClick={() => navigate('/wishlist')}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+              {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
+            </button>
+
+            <button className="header-icon cart" onClick={() => navigate('/cart')}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 2L7 6M17 2l2 4M3 6h18M5 6l2 14h10l2-14" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+              <span>Cart</span>
+              {cartCount > 0 && <span className="badge">{cartCount}</span>}
+            </button>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button className="mobile-toggle" onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <span></span>
             <span></span>
             <span></span>
           </button>
+        </div>
 
-          {/* Desktop Navigation */}
-          <nav className={`nav ${showMobileMenu ? 'mobile-open' : ''}`}>
-            <Link to="/" onClick={() => setShowMobileMenu(false)}>Home</Link>
-            <Link to="/shop" onClick={() => setShowMobileMenu(false)}>Shop</Link>
-            <div className="dropdown">
-              <Link to="/categories">Categories ▾</Link>
-              <div className="dropdown-menu">
-                {categories.map((cat, index) => (
-                  <Link key={index} to={`/category/${cat}`} onClick={() => setShowMobileMenu(false)}>{cat}</Link>
-                ))}
-              </div>
-            </div>
-            <div className="dropdown">
-              <Link to="/tools">Tools ▾</Link>
-              <div className="dropdown-menu">
-                <Link to="/tools/compare" onClick={() => setShowMobileMenu(false)}>Compare Products</Link>
-                <Link to="/tools/compatibility" onClick={() => setShowMobileMenu(false)}>Compatibility Checker</Link>
-                <Link to="/tools/bulb-finder" onClick={() => setShowMobileMenu(false)}>Bulb Size Finder</Link>
-                <Link to="/tools/fitment" onClick={() => setShowMobileMenu(false)}>Fitment Guide</Link>
-              </div>
-            </div>
-            <Link to="/about" onClick={() => setShowMobileMenu(false)}>About</Link>
-
-            {/* Mobile Only Items */}
-            <div className="mobile-only">
-              {isLoggedIn ? (
-                <>
-                  <Link to="/profile" onClick={() => setShowMobileMenu(false)}>Profile</Link>
-                  <Link to="/orders" onClick={() => setShowMobileMenu(false)}>Orders</Link>
-                  <Link to="/wishlist" onClick={() => setShowMobileMenu(false)}>Wishlist</Link>
-                  <button onClick={() => { handleLogout(); setShowMobileMenu(false); }} className="mobile-logout">Logout</button>
-                </>
-              ) : (
-                <>
-                  <Link to="/login" onClick={() => setShowMobileMenu(false)}>Login</Link>
-                  <Link to="/register" onClick={() => setShowMobileMenu(false)}>Register</Link>
-                </>
-              )}
-            </div>
-          </nav>
-
-          {/* Desktop Actions */}
-          <div className="header-actions">
-            <form className="search-box" onSubmit={handleSearch}>
+        {/* Mobile Search Bar */}
+        {showMobileSearch && (
+          <div className="mobile-search-bar">
+            <form onSubmit={(e) => { handleSearch(e); setShowMobileSearch(false); }}>
               <input 
                 type="text" 
                 placeholder="Search products..." 
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                autoFocus
               />
-              <button type="submit" className="search-btn">🔍</button>
+              <button type="submit">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </button>
+              <button type="button" className="close-search" onClick={() => setShowMobileSearch(false)}>✕</button>
             </form>
-            
-            {isLoggedIn ? (
-              <div className="profile-dropdown">
-                <button 
-                  className="profile-btn" 
-                  onClick={() => setShowProfileMenu(!showProfileMenu)}
-                >
-                  <span className="profile-icon">👤</span>
-                  <span className="profile-email">{userEmail.split('@')[0]}</span>
-                  <span className="arrow">▾</span>
-                </button>
-                {showProfileMenu && (
-                  <div className="profile-menu">
-                    <Link to="/profile" onClick={() => setShowProfileMenu(false)}>Profile</Link>
-                    <Link to="/orders" onClick={() => setShowProfileMenu(false)}>Orders</Link>
-                    <Link to="/wishlist" onClick={() => setShowProfileMenu(false)}>Wishlist</Link>
-                    <button onClick={handleLogout} className="logout-btn">Logout</button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <>
-                <button className="auth-btn" onClick={() => navigate('/login')}>Login</button>
-                <button className="auth-btn secondary" onClick={() => navigate('/register')}>Register</button>
-              </>
-            )}
-            
-            <button className="icon-btn wishlist-icon" onClick={() => navigate('/wishlist')}>
-              <span className="icon">♥</span>
-              {wishlistCount > 0 && <span className="wishlist-count">{wishlistCount}</span>}
-            </button>
-            <button className="cart-btn" onClick={() => navigate('/cart')}>
-              <span className="cart-icon">🛒</span>
-              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-            </button>
           </div>
-        </div>
+        )}
       </div>
 
-      {/* Mobile Overlay */}
-      {showMobileMenu && (
-        <div className="mobile-overlay" onClick={() => setShowMobileMenu(false)}></div>
-      )}
+      {/* Navigation Bar */}
+      <nav className={`nav-bar ${showMobileMenu ? 'mobile-active' : ''}`}>
+        <div className="nav-wrapper">
+          <Link to="/shop" className="nav-link" onClick={() => setShowMobileMenu(false)}>
+            SHOP ALL
+          </Link>
+          
+          <div className="nav-dropdown">
+            <button className="nav-link">
+              CATEGORIES
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 9L1 4h10z"/>
+              </svg>
+            </button>
+            <div className="mega-menu">
+              <div className="mega-menu-content">
+                {categories.map((cat, index) => (
+                  <Link key={index} to={`/category/${cat}`} onClick={() => setShowMobileMenu(false)}>
+                    {cat}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="nav-dropdown">
+            <button className="nav-link">
+              TOOLS
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 9L1 4h10z"/>
+              </svg>
+            </button>
+            <div className="mega-menu">
+              <div className="mega-menu-content">
+                <Link to="/tools/bulb-finder" onClick={() => setShowMobileMenu(false)}>Bulb Size Finder</Link>
+                <Link to="/tools/compatibility" onClick={() => setShowMobileMenu(false)}>Compatibility Checker</Link>
+                <Link to="/tools/compare" onClick={() => setShowMobileMenu(false)}>Compare Products</Link>
+                <Link to="/tools/fitment" onClick={() => setShowMobileMenu(false)}>Fitment Guide</Link>
+              </div>
+            </div>
+          </div>
+
+          <Link to="/about" className="nav-link" onClick={() => setShowMobileMenu(false)}>
+            ABOUT
+          </Link>
+          <Link to="/contact" className="nav-link" onClick={() => setShowMobileMenu(false)}>
+            CONTACT
+          </Link>
+          <Link to="/help" className="nav-link" onClick={() => setShowMobileMenu(false)}>
+            SUPPORT
+          </Link>
+        </div>
+      </nav>
+
+      {showMobileMenu && <div className="mobile-backdrop" onClick={() => setShowMobileMenu(false)}></div>}
     </header>
   )
 }

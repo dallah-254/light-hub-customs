@@ -10,6 +10,9 @@
 @import './2-layout.css';
 
 /* 3. Component Styles */
+@import './components/modern-header.css';
+@import './components/modern-footer.css';
+@import './components/hero-banner.css';
 @import './components/header.css';
 
 /* 4. Page Styles - Split into 3 parts */

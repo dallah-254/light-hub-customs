@@ -52,9 +52,23 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="hero-section">
-        {carouselProducts.length > 0 && <Carousel products={carouselProducts} />}
-        <MarketingBar products={allProducts} />
+      {/* Hero Marketing Banner */}
+      <div className="hero-marketing-banner">
+        <div className="banner-content">
+          <h1 className="banner-title">WE PAY THE SALES TAX</h1>
+          <p className="banner-subtitle">10% OFF MOST LIGHTING PRODUCTS</p>
+        </div>
+        <div className="banner-carousel-wrapper">
+          <div className="banner-image">
+            {carouselProducts.length > 0 && <Carousel products={carouselProducts} />}
+          </div>
+          <div className="banner-image desktop-only">
+            {carouselProducts.length > 0 && <Carousel products={carouselProducts} />}
+          </div>
+        </div>
+        <button className="banner-cta" onClick={() => navigate('/shop')}>
+          SHOP THE SALE
+        </button>
       </div>
 
       <SectionBar />

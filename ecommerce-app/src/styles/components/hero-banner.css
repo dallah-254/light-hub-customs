@@ -1,0 +1,151 @@
+/* Hero Marketing Banner */
+
+.hero-marketing-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: #fff;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 1200px;
+}
+
+.banner-title {
+  font-size: 56px;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: 'Georgia', serif;
+  line-height: 1.2;
+}
+
+.banner-subtitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #7c3aed;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.banner-carousel-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  z-index: 1;
+}
+
+.banner-image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.desktop-only {
+  display: block;
+}
+
+.banner-cta {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 20px 60px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 6px 20px rgba(124,58,237,0.4);
+  z-index: 2;
+}
+
+.banner-cta:hover {
+  background: #6d28d9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(124,58,237,0.6);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .banner-carousel-wrapper {
+    gap: 20px;
+  }
+  
+  .banner-title {
+    font-size: 48px;
+  }
+  
+  .banner-subtitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-marketing-banner {
+    padding: 50px 20px;
+    gap: 30px;
+  }
+  
+  .banner-carousel-wrapper {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+  
+  .banner-title {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  
+  .banner-subtitle {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  
+  .banner-cta {
+    padding: 16px 45px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-marketing-banner {
+    padding: 35px 15px;
+    gap: 25px;
+  }
+  
+  .banner-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .banner-subtitle {
+    font-size: 18px;
+  }
+  
+  .banner-cta {
+    padding: 14px 35px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+}
