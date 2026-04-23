@@ -1,6 +1,7 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
 import { DynamoDBDocumentClient, ScanCommand, QueryCommand, GetCommand, PutCommand } from '@aws-sdk/lib-dynamodb'
 import { awsConfig } from '../config/aws-config'
+import API_URL from '../config/api-config'
 
 const client = new DynamoDBClient({
   region: awsConfig.region,
@@ -11,13 +12,9 @@ const docClient = DynamoDBDocumentClient.from(client)
 
 export const getCategories = async () => {
   try {
-    const command = new ScanCommand({
-      TableName: awsConfig.dynamodb.tableName,
-      ProjectionExpression: 'category'
-    })
-    
-    const response = await docClient.send(command)
-    const categories = [...new Set(response.Items.map(item => item.category).filter(Boolean))]
+    const response = await fetch(`${API_URL}/api/products/all`)
+    const products = await response.json()
+    const categories = [...new Set(products.map(item => item.category).filter(Boolean))]
     return categories
   } catch (error) {
     console.error('Error fetching categories:', error)
@@ -27,18 +24,9 @@ export const getCategories = async () => {
 
 export const getProductsBySection = async (section) => {
   try {
-    const command = new ScanCommand({
-      TableName: awsConfig.dynamodb.tableName,
-      FilterExpression: '#sec = :section',
-      ExpressionAttributeNames: {
-        '#sec': 'section'
-      },
-      ExpressionAttributeValues: {
-        ':section': section
-      }
-    })
-    const response = await docClient.send(command)
-    return response.Items || []
+    const response = await fetch(`${API_URL}/api/products/all`)
+    const products = await response.json()
+    return products.filter(p => p.section === section)
   } catch (error) {
     console.error('Error fetching products:', error)
     return []
@@ -47,15 +35,9 @@ export const getProductsBySection = async (section) => {
 
 export const getProductById = async (productId) => {
   try {
-    const command = new ScanCommand({
-      TableName: awsConfig.dynamodb.tableName,
-      FilterExpression: 'productId = :productId',
-      ExpressionAttributeValues: {
-        ':productId': productId
-      }
-    })
-    const response = await docClient.send(command)
-    return response.Items?.[0] || null
+    const response = await fetch(`${API_URL}/api/products/all`)
+    const products = await response.json()
+    return products.find(p => p.productId === productId) || null
   } catch (error) {
     console.error('Error fetching product:', error)
     return null
@@ -64,15 +46,9 @@ export const getProductById = async (productId) => {
 
 export const getProductsByCategory = async (category) => {
   try {
-    const command = new ScanCommand({
-      TableName: awsConfig.dynamodb.tableName,
-      FilterExpression: 'category = :category',
-      ExpressionAttributeValues: {
-        ':category': category
-      }
-    })
-    const response = await docClient.send(command)
-    return response.Items || []
+    const response = await fetch(`${API_URL}/api/products/all`)
+    const products = await response.json()
+    return products.filter(p => p.category === category)
   } catch (error) {
     console.error('Error fetching products by category:', error)
     return []
